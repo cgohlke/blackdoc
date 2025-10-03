@@ -4,13 +4,7 @@ from blackdoc.blacken import blacken
 from blackdoc.classification import detect_format
 from blackdoc.formats import InvalidFormatError, register_format  # noqa: F401
 
-try:
-    __version__ = version("blackdoc")
-except Exception:
-    # Local copy or not installed with setuptools.
-    # Disable minimum version checks on downstream libraries.
-    __version__ = "999"
-
+__version__ = "0.4.3.2"
 
 def line_numbers(lines):
     yield from enumerate(lines, start=1)
